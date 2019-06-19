@@ -57,4 +57,15 @@ public class SysDeptRelationServiceImpl extends ServiceImpl<SysDeptRelationDao,S
         sysDeptRelationDao.insert(own);
         return true;
     }
+
+
+    /**
+     * 根据节点id删除部门关系
+     * @param id
+     * @return
+     */
+    @Override
+    public Boolean removeDeptRelation(Integer id) {
+        return sysDeptRelationDao.removeDeptRelation(id);
+    }
 }

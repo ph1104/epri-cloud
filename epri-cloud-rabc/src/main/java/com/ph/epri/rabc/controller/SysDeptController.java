@@ -67,7 +67,7 @@ public class SysDeptController {
     @DeleteMapping("/{id}")
     @ApiOperation(value = "删除部门信息")
     public R removeDept(@PathVariable Integer id) {
-        return new R<>(sysDeptService.removeById(id));
+        return new R<>(sysDeptService.removeDept(id));
     }
 
     /**

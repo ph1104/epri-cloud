@@ -7,6 +7,25 @@
         <result property="descendant" column="descendant" jdbcType="INTEGER"/>
     </resultMap>
 
-
+    <!--删除部门-->
+    <delete id="removeDeptRelation">
+        DELETE
+        FROM
+            sys_dept_relation
+        WHERE
+            descendant IN (
+                SELECT
+                    temp.descendant
+                FROM
+                    (
+                        SELECT
+                            descendant
+                        FROM
+                            sys_dept_relation
+                        WHERE
+                            ancestor = #{id}
+                    ) temp
+            )
+    </delete>
 
 </mapper>

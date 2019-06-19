@@ -23,4 +23,7 @@ public interface SysDeptService extends IService<SysDept>{
 
     Boolean updateDept(SysDept sysDept);
 
+    Boolean removeDept(Integer id);
+
+
 }

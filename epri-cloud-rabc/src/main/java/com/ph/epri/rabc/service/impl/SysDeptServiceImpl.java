@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 部门管理(SysDept)表服务实现类
@@ -74,9 +75,9 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao,SysDept> implemen
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Boolean updateDept(SysDept sysDept) {
+        SysDept sysDeptOld = this.getById(sysDept.getDeptId());
         //更新部门信息
         this.updateById(sysDept);
-        SysDept sysDeptOld = this.getById(sysDept.getDeptId());
         // 节点的父id发生改变则更新部门关系
         if(ObjectUtil.isNotNull(sysDept.getParentId()) && !sysDeptOld.getParentId().equals(sysDept.getParentId())){
             // 先删除原来的节点关系
@@ -87,6 +88,28 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao,SysDept> implemen
             //再插入新的节点关系
             sysDeptRelationService.saveSysDeptRelation(sysDept);
         }
+        return true;
+    }
+
+
+    /**
+     * 删除部门信息
+     * @param id
+     * @return
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Boolean removeDept(Integer id) {
+        //级联删除
+        List<Integer> ids = sysDeptRelationService.list(new QueryWrapper<SysDeptRelation>()
+                .lambda()
+                .eq(SysDeptRelation::getAncestor,id))
+                .stream()
+                .map(SysDeptRelation::getDescendant)
+                .collect(Collectors.toList());
+        this.removeByIds(ids);
+        //删除部门关系表
+        sysDeptRelationService.removeDeptRelation(id);
         return true;
     }
 }

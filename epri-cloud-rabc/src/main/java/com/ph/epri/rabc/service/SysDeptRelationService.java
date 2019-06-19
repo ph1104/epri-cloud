@@ -13,4 +13,6 @@ import com.ph.epri.rabc.model.entity.SysDeptRelation;
  */
 public interface SysDeptRelationService extends IService<SysDeptRelation>{
     Boolean saveSysDeptRelation(SysDept sysDept);
+
+    Boolean removeDeptRelation(Integer id);
 }
