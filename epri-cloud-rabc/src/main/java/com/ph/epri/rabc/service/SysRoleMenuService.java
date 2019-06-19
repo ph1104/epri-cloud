@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface SysRoleMenuService extends IService<SysRoleMenu>{
 
     Boolean removeRoleMenu(Integer menuId);
+
+    Boolean updateRoleMenu(Integer roleId,String menuIds);
 }

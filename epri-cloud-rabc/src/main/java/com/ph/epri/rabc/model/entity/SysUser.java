@@ -1,10 +1,11 @@
 package com.ph.epri.rabc.model.entity;
 
-import java.util.Date;
-import java.io.Serializable;
-import lombok.Data;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.Date;
 
 
 /**
@@ -58,7 +59,7 @@ public class SysUser implements Serializable {
     private String lockFlag;
 
 
-    @ApiModelProperty(value = "0-正常，1-删除")
+    @ApiModelProperty(value = "0 正常  -1 删除")
     private String delFlag;
 
 
