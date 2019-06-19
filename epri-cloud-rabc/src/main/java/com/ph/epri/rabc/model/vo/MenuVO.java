@@ -54,9 +54,20 @@ public class MenuVO implements Serializable {
 	 */
 	private String icon;
 	/**
-	 * 一个路径
+	 * 前端URL
 	 */
 	private String path;
+
+	/**
+	 * 请求链接
+	 */
+	private String url;
+
+	/**
+	 * 请求方法
+	 */
+	private String method;
+
 	/**
 	 * VUE页面
 	 */

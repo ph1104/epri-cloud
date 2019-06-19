@@ -11,6 +11,6 @@ import com.ph.epri.rabc.model.entity.SysMenu;
  * @since 2019-06-17 10:44:30
  */
 public interface SysMenuService extends IService<SysMenu>{
-
+    Boolean removeMenu(Integer menuId);
    
 }

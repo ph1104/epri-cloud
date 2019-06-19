@@ -10,6 +10,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2019-06-17 10:44:49
  */
 public interface SysRoleMenuDao extends BaseMapper<SysRoleMenu>{
-
+    Boolean removeRoleMenu(Integer menuId);
 
 }

@@ -19,5 +19,9 @@ public class SysRoleMenuServiceImpl extends ServiceImpl<SysRoleMenuDao,SysRoleMe
     @Autowired
     private SysRoleMenuDao sysRoleMenuDao;
 
-   
+
+    @Override
+    public Boolean removeRoleMenu(Integer menuId) {
+        return sysRoleMenuDao.removeRoleMenu(menuId);
+    }
 }

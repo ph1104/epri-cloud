@@ -2,6 +2,7 @@ package com.ph.epri.rabc.controller;
 
 
 import com.ph.epri.common.util.R;
+import com.ph.epri.rabc.model.dto.DeptTree;
 import com.ph.epri.rabc.model.entity.SysDept;
 import com.ph.epri.rabc.service.SysDeptService;
 import io.swagger.annotations.Api;
@@ -10,7 +11,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
+import java.util.List;
 
 
 /**
@@ -51,7 +52,7 @@ public class SysDeptController {
      */
     @GetMapping(value = "/deptTree")
     @ApiOperation(value = "查询部门列表")
-    public R deptTree() {
+    public R<List<DeptTree>> deptTree() {
         return new R<>(sysDeptService.deptTree());
     }
 
@@ -66,7 +67,7 @@ public class SysDeptController {
      */
     @DeleteMapping("/{id}")
     @ApiOperation(value = "删除部门信息")
-    public R removeDept(@PathVariable Integer id) {
+    public R<Boolean> removeDept(@PathVariable Integer id) {
         return new R<>(sysDeptService.removeDept(id));
     }
 

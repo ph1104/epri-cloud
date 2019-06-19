@@ -34,6 +34,8 @@ public class MenuTree extends TreeNode {
 	private String name;
 	private boolean spread = false;
 	private String path;
+	private String url;
+	private String method;
 	private String component;
 	private String authority;
 	private String redirect;
@@ -66,6 +68,8 @@ public class MenuTree extends TreeNode {
 		this.icon = menuVo.getIcon();
 		this.name = menuVo.getName();
 		this.path = menuVo.getPath();
+		this.url = menuVo.getUrl();
+		this.method = menuVo.getMethod();
 		this.component = menuVo.getComponent();
 		this.type = menuVo.getType();
 		this.label = menuVo.getName();
