@@ -21,9 +21,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author lengleng
- * @date 2019/2/1
  * 部门树
+ * @author penghui
+ * @date 2019/6/19 0019   8:54
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

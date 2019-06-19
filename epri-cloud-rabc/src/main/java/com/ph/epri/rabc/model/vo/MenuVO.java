@@ -21,13 +21,12 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+
 /**
- * <p>
- * 菜单权限表
- * </p>
+ * 菜单权限
+ * @author penghui
+ * @date 2019/6/19 0019   8:54
  *
- * @author lengleng
- * @since 2019/2/1
  */
 @Data
 public class MenuVO implements Serializable {

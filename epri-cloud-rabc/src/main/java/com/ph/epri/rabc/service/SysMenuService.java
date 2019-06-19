@@ -1,7 +1,7 @@
 package com.ph.epri.rabc.service;
 
-import com.ph.epri.rabc.model.entity.SysMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.ph.epri.rabc.model.entity.SysMenu;
 
 
 /**

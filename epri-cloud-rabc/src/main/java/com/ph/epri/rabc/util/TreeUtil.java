@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ph.epri.rabc.model.vo;
+package com.ph.epri.rabc.util;
 
 
 import com.ph.epri.common.entity.TreeNode;
@@ -25,10 +25,8 @@ import lombok.experimental.UtilityClass;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author lengleng
- * @date 2017年11月9日23:34:11
- */
+
+
 @UtilityClass
 public class TreeUtil {
 	/**

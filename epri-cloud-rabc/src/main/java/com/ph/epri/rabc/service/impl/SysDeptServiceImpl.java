@@ -7,7 +7,7 @@ import com.ph.epri.rabc.dao.SysDeptDao;
 import com.ph.epri.rabc.model.dto.DeptTree;
 import com.ph.epri.rabc.model.entity.SysDept;
 import com.ph.epri.rabc.model.entity.SysDeptRelation;
-import com.ph.epri.rabc.model.vo.TreeUtil;
+import com.ph.epri.rabc.util.TreeUtil;
 import com.ph.epri.rabc.service.SysDeptRelationService;
 import com.ph.epri.rabc.service.SysDeptService;
 import org.springframework.beans.factory.annotation.Autowired;

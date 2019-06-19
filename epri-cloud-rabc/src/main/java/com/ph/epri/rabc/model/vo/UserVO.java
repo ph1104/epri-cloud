@@ -25,8 +25,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * @author lengleng
- * @date 2019/2/1
+ * @author penghui
+ * @date 2019/6/19 0019   8:54 
+ *
  */
 @Data
 public class UserVO implements Serializable {

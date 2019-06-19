@@ -45,9 +45,9 @@ public class SysDeptController {
 
 
     /**
-     * 返回树形菜单集合
+     * 返回树形部门集合
      *
-     * @return 树形菜单
+     * @return 树形部门
      */
     @GetMapping(value = "/deptTree")
     @ApiOperation(value = "查询部门列表")
