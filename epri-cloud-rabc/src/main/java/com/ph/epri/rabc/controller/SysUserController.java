@@ -25,6 +25,11 @@ public class SysUserController {
     @Autowired
     private SysUserService sysUserService;
 
+    /**
+     * 根据用户名获取用户信息
+     * @param username
+     * @return
+     */
     @GetMapping("/getUserByName")
     public SysUser getUserByName(@RequestParam String username){
         SysUser sysUser = sysUserService.getOne(new QueryWrapper<SysUser>().eq("username",username));

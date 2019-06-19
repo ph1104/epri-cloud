@@ -89,6 +89,7 @@ public class SysRoleController {
      *
      */
     @PutMapping("/updateRoleMenu")
+    @ApiOperation(value = "更新角色权限")
     public R<Boolean> updateRoleMenu(@ApiParam(value = "角色ID") @RequestParam(value = "roleId") Integer roleId,
                                      @ApiParam(value = "菜单ID拼成的字符串，每个id之间根据逗号分隔") @RequestParam(value = "menuIds",required = false) String menuIds
     ){

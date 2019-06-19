@@ -19,7 +19,7 @@ package com.ph.epri.rabc.model.vo;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 
 /**
@@ -87,13 +87,13 @@ public class MenuVO implements Serializable {
 	/**
 	 * 创建时间
 	 */
-	private LocalDateTime createTime;
+	private Date createTime;
 	/**
 	 * 更新时间
 	 */
-	private LocalDateTime updateTime;
+	private Date updateTime;
 	/**
-	 * 0--正常 1--删除
+	 * 0--正常 -1 删除
 	 */
 	private String delFlag;
 

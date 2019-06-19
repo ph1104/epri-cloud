@@ -23,6 +23,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
+ * 菜单树
  * @author penghui
  * @date 2019/6/19 0019   8:54
  *
